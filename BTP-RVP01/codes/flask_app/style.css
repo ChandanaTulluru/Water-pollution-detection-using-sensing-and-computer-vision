@@ -1,0 +1,457 @@
+/*@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        html {
+          background-color: #ecf9ff;
+        }
+
+        body {
+          color: #272727;
+          font-family: 'Quicksand', serif;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0;
+          padding: 1rem;
+        }
+
+        .main{
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        img {
+          height: auto;
+          max-width: 100%;
+          vertical-align: middle;
+        }
+
+        .btn {
+          color: #ffffff;
+          padding: 0.8rem;
+          font-size: 14px;
+          text-transform: uppercase;
+          border-radius: 4px;
+          font-weight: 400;
+          display: block;
+          width: 100%;
+          cursor: pointer;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: transparent;
+        }
+
+        .btn:hover {
+          background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .cards_item {
+          display: flex;
+          padding: 1rem;
+        }
+
+        @media (min-width: 40rem) {
+          .cards_item {
+            width: 50%;
+          }
+        }
+
+        @media (min-width: 56rem) {
+          .cards_item {
+            width: 33.3333%;
+          }
+        }
+
+        .card {
+          background-color: white;
+          border-radius: 0.25rem;
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+
+        .card_content {
+          padding: 1rem;
+          background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+        }
+
+        .card_title {
+          color: #ffffff;
+          font-size: 1.1rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: capitalize;
+          margin: 0px;
+        }
+
+        .card_text {
+          color: #ffffff;
+          font-size: 0.875rem;
+          line-height: 1.5;
+          margin-bottom: 1.25rem;    
+          font-weight: 400;
+        }
+        .made_by{
+          font-weight: 400;
+          font-size: 13px;
+          margin-top: 35px;
+          text-align: center;
+        }*/
+        /* Style for cards ends  */
+body{
+  padding-top:50px;
+  background-color: #FF0000;
+ 
+}
+h3.inner-text {
+  overflow: auto;
+}
+.flip {
+  -webkit-perspective: 800;   
+          perspective: 800;
+        position: relative;
+        text-align: center;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card {
+    width: 270px;
+    height: 178px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-color: #fff;
+   
+}
+.flip .card .face {
+  -webkit-backface-visibility: hidden ;
+    backface-visibility: hidden ;
+   z-index: 2;
+}
+.flip .card .front {
+   position: absolute;
+   width: 270px;
+   z-index: 1;
+}
+.flip .card .front img{
+  width: 270px;
+  height: 270px;
+}
+.flip .card .img {
+   position: relaitve;
+   width: 270px;
+   height: 178px;
+   z-index: 1;
+   border: 2px solid #000;
+}
+.flip .card .back {
+  /*padding-top: 0%;*/
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+  position: absolute;
+}
+.inner{
+  margin:0px !important;
+  width: 270px;
+} 
+.row {margin: 0 -5px;}       
+            body {
+                font-family:'Wendy One', sans-serif;
+            }
+			
+			body {
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #374566), color-stop(100%, #010203));
+  background-image: -webkit-radial-gradient(#374566, #010203);
+  background-image: -moz-radial-gradient(#374566, #010203);
+  background-image: -o-radial-gradient(#374566, #010203);
+  background-image: radial-gradient(#374566, #010203);
+}
+            span {
+                text-transform: uppercase;
+            }
+            .container {
+                width: 800px;
+                height: 600px;
+                padding: 10px;
+                margin: 0 auto;
+                position: relative;
+                /*padding-bottom: 100px;*/
+                /*background-color: ;*/
+            }
+            .balloon {
+                width: 738px;
+                margin: 0 auto;
+                padding-top: 30px;
+                position: relative;
+            }
+            .balloon > div {
+                width: 104px;
+                height: 140px;
+                background: rgba(182, 15, 97, 0.9);
+                border-radius: 0;
+                border-radius: 80% 80% 80% 80%;
+                margin: 0 auto;
+                position: absolute;
+                padding: 10px;
+                box-shadow: inset 17px 7px 10px rgba(182, 15, 97, 0.9);
+                -webkit-transform-origin: bottom center;
+            }
+            .balloon > div:nth-child(1) {
+                background: rgba(182, 15, 97, 0.9);
+                left: 0;
+                box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.9);
+                -webkit-animation: balloon1 6s ease-in-out infinite;
+                -moz-animation: balloon1 6s ease-in-out infinite;
+                -o-animation: balloon1 6s ease-in-out infinite;
+                animation: balloon1 6s ease-in-out infinite;
+            }
+            .balloon > div:nth-child(1):before {
+                color: rgba(182, 15, 97, 0.9);
+            }
+            .balloon > div:nth-child(2) {
+                background: rgba(242, 112, 45, 0.9);
+                left: 120px;
+                box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
+                -webkit-animation: balloon2 6s ease-in-out infinite;
+                -moz-animation: balloon2 6s ease-in-out infinite;
+                -o-animation: balloon2 6s ease-in-out infinite;
+                animation: balloon2 6s ease-in-out infinite;
+            }
+            .balloon > div:nth-child(2):before {
+                color: rgba(242, 112, 45, 0.9);
+            }
+            .balloon > div:nth-child(3) {
+                background: rgba(45, 181, 167, 0.9);
+                left: 240px;
+                box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
+                -webkit-animation: balloon4 6s ease-in-out infinite;
+                -moz-animation: balloon4 6s ease-in-out infinite;
+                -o-animation: balloon4 6s ease-in-out infinite;
+                animation: balloon4 6s ease-in-out infinite;
+            }
+            .balloon > div:nth-child(3):before {
+                color: rgba(45, 181, 167, 0.9);
+            }
+            .balloon > div:nth-child(4) {
+                background: rgba(190, 61, 244, 0.9);
+                left: 360px;
+                box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.9);
+                -webkit-animation: balloon1 5s ease-in-out infinite;
+                -moz-animation: balloon1 5s ease-in-out infinite;
+                -o-animation: balloon1 5s ease-in-out infinite;
+                animation: balloon1 5s ease-in-out infinite;
+            }
+            .balloon > div:nth-child(4):before {
+                color: rgba(190, 61, 244, 0.9);
+            }
+            .balloon > div:nth-child(5) {
+                background: rgba(180, 224, 67, 0.9);
+                left: 480px;
+                box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+                -webkit-animation: balloon3 5s ease-in-out infinite;
+                -moz-animation: balloon3 5s ease-in-out infinite;
+                -o-animation: balloon3 5s ease-in-out infinite;
+                animation: balloon3 5s ease-in-out infinite;
+            }
+            .balloon > div:nth-child(5):before {
+                color: rgba(180, 224, 67, 0.9);
+            }
+            .balloon > div:nth-child(6) {
+                background: rgba(242, 194, 58, 0.9);
+                left: 600px;
+                box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.9);
+                -webkit-animation: balloon2 3s ease-in-out infinite;
+                -moz-animation: balloon2 3s ease-in-out infinite;
+                -o-animation: balloon2 3s ease-in-out infinite;
+                animation: balloon2 3s ease-in-out infinite;
+            }
+            .balloon > div:nth-child(6):before {
+                color: rgba(242, 194, 58, 0.9);
+            }
+            .balloon > div:before {
+                color: rgba(182, 15, 97, 0.9);
+                position: absolute;
+                bottom: -11px;
+                left: 52px;
+                content:"▲";
+                font-size: 1em;
+            }
+            span {
+                font-size: 4.8em;
+                color: white;
+                position: relative;
+                top: 30px;
+                left: 50%;
+                margin-left: -27px;
+            }
+            /*BALLOON 1 4*/
+            @-webkit-keyframes balloon1 {
+                0%, 100% {
+                    -webkit-transform: translateY(0) rotate(-6deg);
+                }
+                50% {
+                    -webkit-transform: translateY(-20px) rotate(8deg);
+                }
+            }
+            @-moz-keyframes balloon1 {
+                0%, 100% {
+                    -moz-transform: translateY(0) rotate(-6deg);
+                }
+                50% {
+                    -moz-transform: translateY(-20px) rotate(8deg);
+                }
+            }
+            @-o-keyframes balloon1 {
+                0%, 100% {
+                    -o-transform: translateY(0) rotate(-6deg);
+                }
+                50% {
+                    -o-transform: translateY(-20px) rotate(8deg);
+                }
+            }
+            @keyframes balloon1 {
+                0%, 100% {
+                    transform: translateY(0) rotate(-6deg);
+                }
+                50% {
+                    transform: translateY(-20px) rotate(8deg);
+                }
+            }
+            /* BAllOON 2 5*/
+            @-webkit-keyframes balloon2 {
+                0%, 100% {
+                    -webkit-transform: translateY(0) rotate(6eg);
+                }
+                50% {
+                    -webkit-transform: translateY(-30px) rotate(-8deg);
+                }
+            }
+            @-moz-keyframes balloon2 {
+                0%, 100% {
+                    -moz-transform: translateY(0) rotate(6deg);
+                }
+                50% {
+                    -moz-transform: translateY(-30px) rotate(-8deg);
+                }
+            }
+            @-o-keyframes balloon2 {
+                0%, 100% {
+                    -o-transform: translateY(0) rotate(6deg);
+                }
+                50% {
+                    -o-transform: translateY(-30px) rotate(-8deg);
+                }
+            }
+            @keyframes balloon2 {
+                0%, 100% {
+                    transform: translateY(0) rotate(6deg);
+                }
+                50% {
+                    transform: translateY(-30px) rotate(-8deg);
+                }
+            }
+            /* BAllOON 0*/
+            @-webkit-keyframes balloon3 {
+                0%, 100% {
+                    -webkit-transform: translate(0, -10px) rotate(6eg);
+                }
+                50% {
+                    -webkit-transform: translate(-20px, 30px) rotate(-8deg);
+                }
+            }
+            @-moz-keyframes balloon3 {
+                0%, 100% {
+                    -moz-transform: translate(0, -10px) rotate(6eg);
+                }
+                50% {
+                    -moz-transform: translate(-20px, 30px) rotate(-8deg);
+                }
+            }
+            @-o-keyframes balloon3 {
+                0%, 100% {
+                    -o-transform: translate(0, -10px) rotate(6eg);
+                }
+                50% {
+                    -o-transform: translate(-20px, 30px) rotate(-8deg);
+                }
+            }
+            @keyframes balloon3 {
+                0%, 100% {
+                    transform: translate(0, -10px) rotate(6eg);
+                }
+                50% {
+                    transform: translate(-20px, 30px) rotate(-8deg);
+                }
+            }
+            /* BAllOON 3*/
+            @-webkit-keyframes balloon4 {
+                0%, 100% {
+                    -webkit-transform: translate(10px, -10px) rotate(-8eg);
+                }
+                50% {
+                    -webkit-transform: translate(-15px, 20px) rotate(10deg);
+                }
+            }
+            @-moz-keyframes balloon4 {
+                0%, 100% {
+                    -moz-transform: translate(10px, -10px) rotate(-8eg);
+                }
+                50% {
+                    -moz-transform: translate(-15px, 10px) rotate(10deg);
+                }
+            }
+            @-o-keyframes balloon4 {
+                0%, 100% {
+                    -o-transform: translate(10px, -10px) rotate(-8eg);
+                }
+                50% {
+                    -o-transform: translate(-15px, 10px) rotate(10deg);
+                }
+            }
+            @keyframes balloon4 {
+                0%, 100% {
+                    transform: translate(10px, -10px) rotate(-8eg);
+                }
+                50% {
+                    transform: translate(-15px, 10px) rotate(10deg);
+                }
+            }
+            h1 {
+                position: relative;
+                top: 200px;
+                text-align: center;
+                color: white;
+                font-size: 3.5em;
+            }
+
+            .carousel-inner {
+              text-align: center;
+              height: 500px;
+            }
+            .carousel-inner img {
+              width: 100%;
+              max-height:100%;
+              object-fit: contain;
+            }
+

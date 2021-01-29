@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<head>
+	<title>Cognitive Object Recognition</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+
+Polystar Template
+
+http://www.templatemo.com/tm-408-polystar
+
+-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="./static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="./static/css/templatemo_misc.css" rel="stylesheet">
+	<link href="./static/css/templatemo_style.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="./static/js/jquery-1.11.1.min.js"></script> 
+	<script src="./static/js/jquery.lightbox.js"></script>
+	<script src="./static/js/templatemo_custom.js"></script>
+	<style >
+		.button {
+  background-color: #0066FF; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<div class="hexagon_container" id="logo">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<div class="hexagon-in2 active">
+							<h2>CIPHENSE</h2>             	 	
+						</div>
+					</div>
+				</div>					
+			</div>
+			<div class="hexagon_container" id="team">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/social.jfif)" >
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal1">SOCIAL DISTANCING</button>
+								</div>      	 	
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="hexagon_container" id="services">
+				<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/yolo.jfif)" >
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal1">YOLOv4</button>
+								</div>      	 	
+							</div>
+						</div>
+					</div>
+			</div>	
+			<div class="hexagon_container" id="contact">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<a href="{{url_for('team')}}">
+							<div class="hexagon-in2">
+								<i class="fa fa-user"></i>
+								<h2>OUR TEAM</h2>             	 	
+							</div>
+						</a>
+					</div>
+				</div>				
+			</div>		
+		</div>
+		<div id="gallery-content">
+			<header>
+				<h1>COGNITIVE OBJECT RECOGNITION</h1>
+			</header>
+			<div class="content gallery" id="page1">
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/1.jpg);">
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal1">BACKPACK</button>
+									<p>This model detects backpacks</p>
+								</div>      	 	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/2.jpg);">
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal2">GUN</button>
+									<p>Works well with smaller guns</p>
+								</div>       	 	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/3.jpg);">
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal3">HELMET</button>
+									<p>Detects various types of helmets</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/4.jpg);">
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal4">KNIFE</button>
+									<p>This model detects knives</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/5.jpg);">
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal5">LICENSE PLATE</button>
+									<p>Detects vehicles and LPs</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/6.jpg);">
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal6">HANDBAGS</button>
+									<p>Detects Handbags</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(./static/images/gallery/7.jpg);">
+								<div class="overlay">
+									<button class="modal-btn" data-modal="modal7">MASK</button>
+									<p>Detects mask or no mask</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<center><div><a href="{{ url_for('upload_file')}}"><button class="button button2" name="submit" onclick="upload_file()">Proceed to test</button></a>
+				</center>
+				<br><br>
+			</div>
+				
+
+			</div>
+			<!-- <div class="content gallery" id="page2" style="display:none;">
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/8.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/8.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>      	 	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/9.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/9.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>         	 	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/10.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/10.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/11.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/11.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/12.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/12.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/13.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/13.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/14.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/14.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content gallery" id="page3" style="display:none;">
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/15.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/15.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>      	 	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/16.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/16.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>         	 	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/17.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/17.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/18.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/18.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/19.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/19.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/20.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/20.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 gallery-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" style="background-image:url(images/gallery/21.jpg);">
+								<div class="overlay">
+									<a href="images/gallery/21.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>-->
+			<!-- <div class="pagination">
+				<ul>
+					<li id="page_link_1" class="active">1</li>
+					<li id="page_link_2">2</li>
+					<li id="page_link_3">3</li>
+				</ul>
+			</div>	 -->
+
+		</div>
+
+	</div>
+	<!-- <button>hi</button> -->
+	<div class="modal-bg" id="modal1">
+		<div class="modal">
+			<h2>Please upload your files here</h2>
+			<span class="modal-close" data-modal="modal1">X</span>
+			<center>
+			<form method = 'POST' enctype="multipart/form-data">
+				<br><br><br><br><br>
+				<input type="file" name="file">
+				<br><br>
+				<input type="submit" class="file" name="submit" value="UPLOAD">
+			</form>
+			</center>
+			<p>Supported Formats:- jpg,jpeg,png for images and mp4 for video</p>
+		</div>
+	</div>
+	<div class="modal-bg" id="modal2">
+		<div class="modal">
+			<h2>Please Upload your files here</h2>
+			<span class="modal-close" data-modal="modal2">X</span>
+			<center>
+			<form method = 'POST' enctype="multipart/form-data">
+				<br><br><br><br><br>
+				<input type="file" name="file">
+				<br><br>
+				<input type="submit" class="file" name="submit" value="UPLOAD">
+			</form>
+			</center>
+			<p>Supported Formats:- jpg,jpeg,png for images and mp4 for video</p>
+		</div>
+	</div>
+	<div class="modal-bg" id="modal3">
+		<div class="modal">
+			<h2>Please Upload your files here</h2>
+			<span class="modal-close" data-modal="modal3">X</span>
+			<center>
+			<form method = 'POST' enctype="multipart/form-data">
+				<br><br><br><br><br>
+				<input type="file" name="file">
+				<br><br>
+				<input type="submit" class="file" name="submit" value="UPLOAD">
+			</form>
+			</center>
+			<p>Supported Formats:- jpg,jpeg,png for images and mp4 for video</p>
+		</div>
+	</div>
+	<div class="modal-bg" id="modal4">
+		<div class="modal">
+			<h2>Please Upload your files here</h2>
+			<span class="modal-close" data-modal="modal4">X</span>
+			<center>
+			<form method = 'POST' enctype="multipart/form-data">
+				<br><br><br><br><br>
+				<input type="file" name="file">
+				<br><br>
+				<input type="submit" class="file" name="submit" value="UPLOAD">
+			</form>
+			</center>
+			<p>Supported Formats:- jpg,jpeg,png for images and mp4 for video</p>
+		</div>
+	</div>
+	<div class="modal-bg" id="modal5">
+		<div class="modal">
+			<h2>Please Upload your files here</h2>
+			<span class="modal-close" data-modal="modal5">X</span>
+			<center>
+			<form method = 'POST' enctype="multipart/form-data">
+				<br><br><br><br><br>
+				<input type="file" name="file">
+				<br><br>
+				<input type="submit" class="file" name="submit" value="UPLOAD">
+			</form>
+			</center>
+			<p>Supported Formats:- jpg,jpeg,png for images and mp4 for video</p>
+		</div>
+	</div>
+	<div class="modal-bg" id="modal6">
+		<div class="modal">
+			<h2>Please Upload your files here</h2>
+			<span class="modal-close" data-modal="modal6">X</span>
+			<center>
+			<form method = 'POST' enctype="multipart/form-data">
+				<br><br><br><br><br>
+				<input type="file" name="file">
+				<br><br>
+				<input type="submit" class="file" name="submit" value="UPLOAD">
+			</form>
+			</center>
+			<p>Supported Formats:- jpg,jpeg,png for images and mp4 for video</p>
+		</div>
+	</div>
+	<div class="modal-bg" id="modal7">
+		<div class="modal">
+			<h2>Please Upload your files here</h2>
+			<span class="modal-close" data-modal="modal7">X</span>
+			<center>
+			<form method = 'POST' enctype="multipart/form-data">
+				<br><br><br><br><br>
+				<input type="file" name="file">
+				<br><br>
+				<input type="submit" class="file" name="submit" value="UPLOAD">
+			</form>
+			</center>
+			<p>Supported Formats:- jpg,jpeg,png for images and mp4 for video</p>
+		</div>
+	</div>
+	<div class="templatemo_footer">
+    	Copyright © 2019 CIPHENSE<br>
+		<!-- Photos by <a rel="nofollow" href="http://unsplash.com">Unsplash</a> -->
+    </div>
+	<script src="./static/js/app.js"></script>
+	<script type="text/javascript">
+		$('#page_link_1').click({page_no:1},pagination_click);
+		$('#page_link_2').click({page_no:2},pagination_click);
+		$('#page_link_3').click({page_no:3},pagination_click);
+	</script>
+</body>
+</html>
