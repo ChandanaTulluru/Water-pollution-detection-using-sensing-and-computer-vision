@@ -1,11 +1,11 @@
 from os import listdir
-from xml.etree import ElementTree
 from numpy import zeros
 from numpy import asarray
 from mrcnn.utils import Dataset
 import matplotlib.pyplot as plt
 from mrcnn.config import Config
 from mrcnn.model import MaskRCNN
+import defusedxml.ElementTree
  
 # class that defines and loads the kangaroo dataset
 # discard_id=['_jpg.rf.4da7b','_jpg.rf.2fac5','_jpg.rf.78bca','rf.0a02c7f6f0','_jpg.rf.b069f','rf.d387bb6db6']
@@ -46,7 +46,7 @@ class KangarooDataset(Dataset):
 	# extract bounding boxes from an annotation file
 	def extract_boxes(self, filename):
 		# load and parse the file
-		tree = ElementTree.parse(filename)
+		tree = defusedxml.ElementTree.parse(filename)
 		# get the root of the document
 		root = tree.getroot()
 		# extract each bounding box
