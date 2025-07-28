@@ -28,7 +28,7 @@ def get_class(classes_path):
 def get_anchors(anchors_path):
     anchors_path = os.path.expanduser(anchors_path)
     with open(anchors_path) as f:
-        anchors = f.readline()
+        anchors = f.readline(5_000_000)
     anchors = [float(x) for x in anchors.split(',')]
     return np.array(anchors).reshape(-1, 2)
 
