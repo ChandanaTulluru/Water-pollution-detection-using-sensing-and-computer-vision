@@ -1,6 +1,5 @@
 # evaluate the mask rcnn model on the kangaroo dataset
 from os import listdir
-from xml.etree import ElementTree
 from numpy import zeros
 from numpy import asarray
 from numpy import expand_dims
@@ -13,6 +12,7 @@ from mrcnn.model import load_image_gt
 from mrcnn.model import mold_image
 import matplotlib.pyplot as plt
 import matplotlib.patches as pt
+import defusedxml.ElementTree
 
 # class that defines and loads the kangaroo dataset
 class KangarooDataset(Dataset):
@@ -52,7 +52,7 @@ class KangarooDataset(Dataset):
 	# extract bounding boxes from an annotation file
 	def extract_boxes(self, filename):
 		# load and parse the file
-		tree = ElementTree.parse(filename)
+		tree = defusedxml.ElementTree.parse(filename)
 		# get the root of the document
 		root = tree.getroot()
 		# extract each bounding box
